@@ -14,9 +14,8 @@ class InputData(BaseModel):
 class OutputData(BaseModel):
     size: str
 
-
 model = load('./model/ropa-size-prediction.joblib')
-label_encoder = load('model/label_encoder.joblib')
+label_encoder = load('./model/label_encoder.joblib')
 
 @app.post('/predict', response_model=OutputData)
 def predict(data: InputData):
@@ -35,3 +34,4 @@ def predict(data: InputData):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
+    #hola

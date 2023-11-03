@@ -11,10 +11,8 @@ df = df.dropna()
 X = df[['weight', 'age', 'height']]
 y = df['size']
 
-# Codificar la variable categórica 'size'
 label_encoder = LabelEncoder()
 y = label_encoder.fit_transform(y)
-
 
 regressor = RandomForestRegressor(n_estimators=300,max_depth=50, random_state=0)
 regressor.fit(X, y)
