@@ -20,9 +20,9 @@ jobs:
       run: pip install -r requirements.txt
 # DESCARGA DATASET
     - name: download dataset
-      run: wget -O data/train.csv ${{github.event.client_payload.dataseturl}}
+      run: wget -O data/final_test.csv ${{github.event.client_payload.dataseturl}}
     - name: cat dataset
-      run: cat data/train.csv
+      run: cat data/final_test.csv
 
 #DOCKER BUILD
     - name: docker build
