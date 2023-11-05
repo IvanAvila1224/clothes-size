@@ -20,6 +20,8 @@ jobs:
     - name: Install numpy
       run: pip install numpy>=1.23.3
     - name: pip install
+    - name: Install scipy
+      run: pip install scipy>=0.19.1
       run: pip install --no-build-isolation -r requirements.txt
     - name: train model
       run: python model/train.py
