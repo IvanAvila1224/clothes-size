@@ -16,7 +16,7 @@ spec:
       containers:
       - name: {model_name}-container
         #image: gcr.io/tensorflow-serving/resnet 
-        image: docker.io/ivanavila/sizefastapi:latest
+        image: docker.io/ivanavila/sizefast:latest
         ports:
         - containerPort: 80
 ---
