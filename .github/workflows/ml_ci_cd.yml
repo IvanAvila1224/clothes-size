@@ -17,6 +17,8 @@ jobs:
       run: python --version
     - name: Install Cython
       run: pip install cython==0.29.25
+    - name: Install numpy
+      run: pip install numpy
     - name: pip install
       run: pip install --no-build-isolation -r requirements.txt
     - name: train model
